@@ -1,8 +1,5 @@
-<HTML>
-    <head>
-        <title>Login PAGE</title>
-    </head>
-    <body>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
         <div class="container">
         <h1>
             welcome ${name}
@@ -11,5 +8,4 @@
         <div><a href="list-todo">Manager</a>your todos</div>
         </form>
     </div>
-    </body>
-</HTML>
+    <%@ include file="common/footer.jspf" %>
