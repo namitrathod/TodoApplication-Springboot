@@ -5,7 +5,7 @@
             welcome ${name}
         </h1>
         <hr>
-        <div><a href="list-todo">Manager</a>your todos</div>
+        <div><a href="list-todo">Manager</a> your todos</div>
         </form>
     </div>
     <%@ include file="common/footer.jspf" %>

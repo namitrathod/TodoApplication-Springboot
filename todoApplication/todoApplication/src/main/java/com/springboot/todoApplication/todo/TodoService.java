@@ -20,8 +20,16 @@ public class TodoService {
 		todos.add(new Todo(++todocount,"namit","Learn dyjango", LocalDate.now().plusYears(1), false ));
 	}
 	public List<Todo> findByUsername(String username){
-		return todos;
-	}
+		Predicate<? super Todo> predicate= todo -> todo.getUsername().equalsIgnoreCase(username);
+		return todos.stream().filter(predicate).toList();}
+		// // public List<Todo> findByUsername(String username){
+		// 	Predicate<? super Todo> predicate = todo -> {
+		// 		String todoUsername = todo.getUsername();
+		// 		return todoUsername != null && todoUsername.equalsIgnoreCase(username);
+		// 	};
+		// 	return todos.stream().filter(predicate).toList();
+		// }
+		
 
 	public void addtodos(String username, String description, LocalDate localDate, boolean done){
 		Todo todo = new Todo(++todocount, username, description, localDate, done);
